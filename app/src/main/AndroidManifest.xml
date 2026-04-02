@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Personal_Finance_App">
         <activity
+            android:name=".AuthPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
