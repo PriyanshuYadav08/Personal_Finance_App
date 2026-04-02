@@ -1,20 +1,37 @@
 package com.example.personal_finance_app
 
+import android.content.Intent
+import com.example.personal_finance_app.R
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.content.edit
 
 class SplashScreenActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.splash_screen)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        Handler(Looper.getMainLooper()).postDelayed({
+
+            val sharedPref = getSharedPreferences("auth_prefs", MODE_PRIVATE)
+            val lastLoginTime = sharedPref.getLong("last_login_time", 0)
+
+            val currentTime = System.currentTimeMillis()
+            val sevenDays = 7 * 24 * 60 * 60 * 1000L
+
+            if (lastLoginTime != 0L && (currentTime - lastLoginTime) < sevenDays) {
+                startActivity(Intent(this, MainActivity::class.java))
+            } else {
+                sharedPref.edit { clear() }
+                startActivity(Intent(this, AuthPageActivity::class.java))
+            }
+            finish()
+        }, 2000) // 2 seconds
     }
 }
