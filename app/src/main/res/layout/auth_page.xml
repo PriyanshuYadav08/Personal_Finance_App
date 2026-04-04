@@ -6,7 +6,7 @@
     android:background="@drawable/bg_gradient"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthPageActivity">
+    tools:context=".ui.main.AuthPageActivity">
 
     <TextView
         android:id="@+id/top_txt"

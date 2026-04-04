@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Personal_Finance_App">
         <activity
-            android:name=".AuthPageActivity"
+            android:name=".ui.main.AuthPageActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.main.SplashScreenActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="false">
         </activity>
     </application>

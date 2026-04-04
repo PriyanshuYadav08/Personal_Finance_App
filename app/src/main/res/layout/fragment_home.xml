@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/user_name_text"
+            android:text="Hi, User 👋"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_primary"
+            android:fontFamily="@font/rubik_bold"/>
+
+        <!-- Balance Card -->
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:padding="20dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Total Balance"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_secondary"/>
+
+            <TextView
+                android:text="₹0"
+                android:textSize="28sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/rubik_bold"/>
+        </LinearLayout>
+
+        <!-- Income / Expense -->
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Income\n₹0"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/income"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Expense\n₹0"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/expense"/>
+        </LinearLayout>
+
+        <!-- Chart Placeholder -->
+        <TextView
+            android:layout_marginTop="20dp"
+            android:text="Chart Coming Soon"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_secondary"/>
+
+    </LinearLayout>
+</ScrollView>

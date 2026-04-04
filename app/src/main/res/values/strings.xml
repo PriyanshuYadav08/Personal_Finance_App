@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">Personal_Finance_App</string>
+    <string name="app_name">PennyWise</string>
     <string name="default_web_client_id">678182915970-ksvbbee19jl3a70l9fe1jv7lu544akql.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

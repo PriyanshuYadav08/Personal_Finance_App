@@ -1,14 +1,11 @@
-package com.example.personal_finance_app
+package com.example.personal_finance_app.ui.main
 
 import android.content.Intent
 import com.example.personal_finance_app.R
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.content.edit
 
 class SplashScreenActivity : AppCompatActivity() {
