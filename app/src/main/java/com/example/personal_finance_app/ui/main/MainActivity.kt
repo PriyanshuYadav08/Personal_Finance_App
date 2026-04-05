@@ -1,5 +1,6 @@
 package com.example.personal_finance_app.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import com.example.personal_finance_app.ui.main.HomeFragment
 import com.example.personal_finance_app.ui.main.TransactionsFragment
 import com.example.personal_finance_app.ui.main.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +28,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_profile -> loadFragment(ProfileFragment())
             }
             true
+        }
+
+        val fab = findViewById<FloatingActionButton>(R.id.fab_add)
+
+        fab.setOnClickListener {
+            startActivity(Intent(this, AddTransactionActivity::class.java))
         }
     }
 
