@@ -59,4 +59,6 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    implementation("com.github.PhilJay:MPAndroidChart:3.1.0")
 }

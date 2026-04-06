@@ -30,10 +30,13 @@ PennyWise is a modern Android application designed to help users track daily fin
 
 ## 🧱 Tech Stack
 
-* **Language -** Kotlin
-* **UI -** XML (ConstraintLayout)
-* **Architecture -** MVVM (planned)
-* **Authentication -** Firebase Auth (Google Sign-In)
+* **Language** - Kotlin
+* **UI** - XML (ConstraintLayout)
+* **Architecture** - MVVM-inspired (Room + LiveData)
+* **Authentication** - Firebase Auth (Google Sign-In)
+* **Database** - Room (SQLite)
+* **Charts** - MPAndroidChart (Pe chart for expense visualisation)
+* **Dependency Management** - Gradle Version Catalog (`libs.version.toml`)
 ---
 
 ## 📱 App Flow
@@ -119,7 +122,8 @@ Copy SHA-1 and paste it in Firebase Console.
 In `app/build.gradle`:
 
 ```gradle
-implementation 'com.google.android.gms:play-services-auth:20.7.0'
+implementation 'com.google.android.gms:play-services-auth:21.5.1'
+implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 implementation 'com.google.firebase:firebase-auth:22.3.0'
 ```
 
@@ -165,12 +169,6 @@ Sync Now
 * Progress tracking
 * Visual progress indicator
 
-### 📈 Insights Screen
-
-* Spending trends
-* Category breakdown
-* Weekly/monthly comparisons
-
 ### 🗄️ Data Handling
 
 * Room Database (local storage)
@@ -180,11 +178,12 @@ Sync Now
 
 ## ✨ Future Enhancements
 
-* Dark mode
-* Notifications/reminders
-* Data export
-* Biometric authentication
-* Cloud sync (optional)
+* Dark Mode
+* Notifications/Reminders
+* Data Export
+* Monthly Insights
+* Biometric Authentication
+* Cloud Sync (let's see)
 
 ---
 
@@ -194,13 +193,20 @@ Sync Now
 com.example.personal_finance_app
 │
 ├── ui/
-├── viewmodel/
-├── repository/
+│   ├── main/
+│       ├── AddTransactionActivity.kt
+│       ├── AuthPageActivity.kt
+│       ├── HomeFragment.kt
+│       ├── MainActivity.kt
+│       ├── ProfileFragment.kt
+│       ├── SplashScreenActivity.kt
+│       ├── TransactionAdapter.kt
+│       ├── TransactionsFragment.kt
 ├── data/
-│   ├── db/
-│   ├── model/
-│
-└── utils/
+│   ├── local/
+│       ├── AppDatabase.kt
+│       ├── TransactionsDao.kt
+│       ├── TransactionsEntity.kt
 ```
 ---
 
@@ -212,4 +218,4 @@ com.example.personal_finance_app
 
 ## ⭐️ If you like this project
 
-Give it a star ⭐ on GitHub
+Give it a star ⭐ on GitHub and Contributions are always welcome...

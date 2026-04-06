@@ -99,13 +99,11 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/primary"/>
 
-        <!-- Chart Placeholder -->
-        <TextView
-            android:layout_marginTop="20dp"
-            android:text="Chart Coming Soon"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textColor="@color/text_secondary"/>
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 </ScrollView>
