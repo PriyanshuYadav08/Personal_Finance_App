@@ -46,7 +46,7 @@
                         android:text="Total Balance"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/text_secondary"
                         android:fontFamily="@font/rubik_bold"/>
 
                     <TextView
@@ -55,7 +55,7 @@
                         android:textSize="28sp"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:textColor="@color/primary"
+                        android:textColor="@color/text_primary"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
 
@@ -124,8 +124,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/primary"
-                app:strokeColor="@color/green">
+                android:backgroundTint="@color/primary_light"
+                app:strokeColor="@color/primary_light">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -144,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textSize="18sp"
-                        android:textColor="@color/soft_lavender"
+                        android:textColor="@color/primary_dark"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -154,8 +154,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/primary"
-                app:strokeColor="@color/green">
+                android:backgroundTint="@color/primary_light"
+                app:strokeColor="@color/primary_light">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textSize="18sp"
-                        android:textColor="@color/soft_lavender"
+                        android:textColor="@color/primary_dark"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -184,8 +184,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/primary"
-                app:strokeColor="@color/green">
+                android:backgroundTint="@color/primary_light"
+                app:strokeColor="@color/primary_light">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -204,7 +204,7 @@
                         android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textSize="18sp"
-                        android:textColor="@color/soft_lavender"
+                        android:textColor="@color/primary_dark"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -219,8 +219,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/primary"
-                app:strokeColor="@color/green">
+                android:backgroundTint="@color/primary_light"
+                app:strokeColor="@color/primary_light">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -239,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textSize="18sp"
-                        android:textColor="@color/soft_lavender"
+                        android:textColor="@color/primary_dark"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -249,8 +249,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/primary"
-                app:strokeColor="@color/green">
+                android:backgroundTint="@color/primary_light"
+                app:strokeColor="@color/primary_light">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -269,7 +269,7 @@
                         android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textSize="18sp"
-                        android:textColor="@color/soft_lavender"
+                        android:textColor="@color/primary_dark"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -279,8 +279,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/primary"
-                app:strokeColor="@color/green">
+                android:backgroundTint="@color/primary_light"
+                app:strokeColor="@color/primary_light">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -299,18 +299,20 @@
                         android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textSize="18sp"
-                        android:textColor="@color/soft_lavender"
+                        android:textColor="@color/primary_dark"
                         android:fontFamily="@font/rubik_bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
         <TextView
-            android:text="Savings Goal"
+            android:text="Set Your Savings Goal"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"/>
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:fontFamily="@font/rubik_bold"/>
 
         <ProgressBar
             android:id="@+id/progress_goal"
@@ -318,22 +320,28 @@
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:progressTint="@color/black"
-            android:progressBackgroundTint="@color/grey"
+            android:progressBackgroundTint="@color/primary"
             android:max="100"/>
 
         <TextView
             android:id="@+id/tv_goal_status"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
             android:text="₹0 / ₹0"/>
 
         <Button
             android:id="@+id/btn_set_goal"
             android:text="Set Goal"
+            android:fontFamily="@font/rubik_bold"
+            android:textSize="16sp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/primary"/>
+            android:backgroundTint="#4A148C"/>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pie_chart"
